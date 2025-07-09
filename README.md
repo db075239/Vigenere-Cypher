@@ -48,14 +48,14 @@ The Vigenere cipher is a method of encrypting alphabetic text by using a series 
 
 ### How it Works
 
-The `Projekt.py` script provides a universal Vigenere cipher function that can encrypt or decrypt data[cite: 107].
+The `Projekt.py` script provides a universal Vigenere cipher function that can encrypt or decrypt data.
 
 * **Text Encryption/Decryption**: When a code table is provided, the function operates on text. Each character in the plaintext is associated with a numerical code from the table. The shift for each character is calculated based on its numerical code and the corresponding character in the key. For encryption, the character's code is increased by the key character's code, and for decryption, it's decreased. The result is then mapped back to a character using a reverse code table.
 * **Binary Data Encryption/Decryption**: If no code table is provided, the function treats the input as binary data. In this case, for each byte in the data, the corresponding shift from the key is applied (added or subtracted) using modular arithmetic (modulo 256) for encryption or decryption.
 
 The core Vigenere cipher operations can be represented with modular arithmetic (assuming A=0, B=1, ..., Z=25):
-* Encryption: $C_{i}=E_{K}(M_{i})=(M_{i}+K_{i}) \pmod{26}$ [cite: 63]
-* Decryption: $M_{i}=D_{K}(C_{i})=(C_{i}-K_{i}) \pmod{26}$ [cite: 65]
+* Encryption: $C_{i}=E_{K}(M_{i})=(M_{i}+K_{i}) \pmod{26}$ 
+* Decryption: $M_{i}=D_{K}(C_{i})=(C_{i}-K_{i}) \pmod{26}$ 
 where $M=M_{1}...M_{n}$ is the message, $C=C_{1}...C_{n}$ is the ciphertext, and $K=K_{1}...K_{n}$ is the key, obtained by repeating a keyword $\lceil n/m\rceil$ times, where $m$ is the length of the keyword.
 
 ### Usage
